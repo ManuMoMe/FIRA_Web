@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Gráfica de Línea con Datos de una API y Chart.js</title>
+    <title>Gráfica de Línea con Energía Diaria de una API y Chart.js</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
 </head>
 <body>
     <canvas id="myChart" width="400" height="200"></canvas>
-
+    <h1>Holaa</h1>
     <script>
         var ctx = document.getElementById('myChart').getContext('2d');
 
@@ -14,19 +14,20 @@
         async function obtenerDatosDeAPI() {
             try {
                 // Realizar una solicitud GET a la API (reemplaza la URL con la de tu API)
-                const response = await fetch('URL_DE_TU_API_AQUI');
+                const response = await fetch('https://raw.githubusercontent.com/ManuMoMe/FIRA_Web/main/fira_data.json');
                 const data = await response.json();
 
                 // Procesar los datos obtenidos de la API
-                const labels = data.map(item => item.label); // Reemplaza 'label' con el campo deseado
-                const valores = data.map(item => item.valor); // Reemplaza 'valor' con el campo deseado
+                const datosDiarios = data.datos_diarios;
+                const fechas = datosDiarios.map(item => item.fecha); // Extraer las fechas
+                const energiasObtenidas = datosDiarios.map(item => item.energia_obtenida); // Extraer las energías obtenidas
 
                 // Datos para la gráfica
                 var datosGrafica = {
-                    labels: labels,
+                    labels: fechas.reverse(), // Invertir el orden para mostrar la fecha más reciente primero
                     datasets: [{
-                        label: 'Datos de la API',
-                        data: valores,
+                        label: 'Energía Diaria',
+                        data: energiasObtenidas.reverse(), // Invertir el orden para coincidir con las fechas
                         borderColor: 'blue',
                         backgroundColor: 'transparent',
                         borderWidth: 2
