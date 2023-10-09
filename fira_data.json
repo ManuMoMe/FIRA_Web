@@ -1,0 +1,27 @@
+{
+    "maximo": 9500,
+    "minimo": 3500,
+    "datos_diarios": [
+      {
+        "fecha": "2023-10-05",
+        "energia_obtenida": 7000
+      },
+      {
+        "fecha": "2023-10-04",
+        "energia_obtenida": 7200
+      },
+      {
+        "fecha": "2023-10-03",
+        "energia_obtenida": 6800
+      },
+      {
+        "fecha": "2023-10-02",
+        "energia_obtenida": 7100
+      },
+      {
+        "fecha": "2023-10-01",
+        "energia_obtenida": 7300
+      }
+    ]
+  }
+  

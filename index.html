@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gráfica de Línea con Datos de una API y Chart.js</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+</head>
+<body>
+    <canvas id="myChart" width="400" height="200"></canvas>
+
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+
+        // Función para obtener los datos de la API
+        async function obtenerDatosDeAPI() {
+            try {
+                // Realizar una solicitud GET a la API (reemplaza la URL con la de tu API)
+                const response = await fetch('URL_DE_TU_API_AQUI');
+                const data = await response.json();
+
+                // Procesar los datos obtenidos de la API
+                const labels = data.map(item => item.label); // Reemplaza 'label' con el campo deseado
+                const valores = data.map(item => item.valor); // Reemplaza 'valor' con el campo deseado
+
+                // Datos para la gráfica
+                var datosGrafica = {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Datos de la API',
+                        data: valores,
+                        borderColor: 'blue',
+                        backgroundColor: 'transparent',
+                        borderWidth: 2
+                    }]
+                };
+
+                // Configuración de la gráfica
+                var opciones = {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                };
+
+                // Crear la gráfica de línea
+                var myChart = new Chart(ctx, {
+                    type: 'line',
+                    data: datosGrafica,
+                    options: opciones
+                });
+            } catch (error) {
+                console.error('Error al obtener datos de la API: ', error);
+            }
+        }
+
+        // Llamar a la función para obtener datos de la API y crear la gráfica
+        obtenerDatosDeAPI();
+    </script>
+</body>
+</html>
