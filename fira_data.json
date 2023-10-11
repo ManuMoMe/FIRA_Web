@@ -24,43 +24,63 @@
       },
       {
         "fecha": "2023-09-30",
-        "energia_obtenida": 7000
+        "energia_obtenida": 6800
       },
       {
         "fecha": "2023-09-29",
-        "energia_obtenida": 7200
+        "energia_obtenida": 6500
       },
       {
         "fecha": "2023-09-28",
-        "energia_obtenida": 6800
+        "energia_obtenida": 5500
       },
       {
         "fecha": "2023-09-27",
-        "energia_obtenida": 7100
+        "energia_obtenida": 6000
       },
       {
         "fecha": "2023-09-26",
-        "energia_obtenida": 7300
+        "energia_obtenida": 6500
       },
       {
         "fecha": "2023-09-25",
-        "energia_obtenida": 7000
-      },
-      {
-        "fecha": "2023-09-24",
-        "energia_obtenida": 7200
-      },
-      {
-        "fecha": "2023-09-23",
-        "energia_obtenida": 6800
-      },
-      {
-        "fecha": "2023-09-22",
         "energia_obtenida": 7100
       },
       {
-        "fecha": "2023-09-21",
+        "fecha": "2023-09-24",
         "energia_obtenida": 7300
+      },
+      {
+        "fecha": "2023-09-23",
+        "energia_obtenida": 7400
+      },
+      {
+        "fecha": "2023-09-22",
+        "energia_obtenida": 7000
+      },
+      {
+        "fecha": "2023-09-21",
+        "energia_obtenida": 7200
+      },
+      {
+        "fecha": "2023-09-20",
+        "energia_obtenida": 7100
+      },
+      {
+        "fecha": "2023-09-19",
+        "energia_obtenida": 7300
+      },
+      {
+        "fecha": "2023-09-18",
+        "energia_obtenida": 7400
+      },
+      {
+        "fecha": "2023-09-17",
+        "energia_obtenida": 7000
+      },
+      {
+        "fecha": "2023-09-16",
+        "energia_obtenida": 7200
       }
     ]
   }
