@@ -4,8 +4,8 @@
     <title>Gráfica de Línea con Energía Diaria de una API y Chart.js</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
 </head>
-<body>
-    <canvas id="myChart" width="400" height="200"></canvas>
+<body style="background-color: black;">
+    <canvas id="myChart" width="400" height="200" style="background-color: transparent;"></canvas>
     <script>
         var ctx = document.getElementById('myChart').getContext('2d');
 
@@ -28,8 +28,10 @@
                         label: 'Energía Diaria',
                         data: energiasObtenidas.reverse(), // Invertir el orden para coincidir con las fechas
                         borderColor: 'blue',
-                        backgroundColor: 'transparent',
-                        borderWidth: 2
+                        backgroundColor: 'blue',
+                        borderWidth: 2,
+                        tension:0.2,
+                        fill: false
                     }]
                 };
 
